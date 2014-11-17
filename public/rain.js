@@ -25,7 +25,7 @@ function usePosition(position) {
     var x = document.getElementById("demo");
     var temperature;
 
-    $.get('http://localhost:3000/api/'+ parseFloat(position.coords.latitude).toFixed(2) + '/' + parseFloat(position.coords.longitude).toFixed(2), function(data){
+    $.get('https://itsalwaysraininginseattle.herokuapp.com/api/'+ parseFloat(position.coords.latitude).toFixed(2) + '/' + parseFloat(position.coords.longitude).toFixed(2), function(data){
         //    $.get('http://localhost:3000/api/47.6/-100', function(data) 
         //
         //          {
