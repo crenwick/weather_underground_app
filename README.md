@@ -1,7 +1,7 @@
 weather_underground_app
 =======================
 
-[![Build Status](https://travis-ci.org/crenwick/weather_underground_app.svg)](https://travis-ci.org/crenwick/weather_underground_app)
+[![Build Status](https://travis-ci.org/crenwick/weather_underground_app.svg?branch=master)](https://travis-ci.org/crenwick/weather_underground_app)
 
 Pulls info from the weather underground api of any location and checks if its raining in comparasion to Seattle, WA.
 
