@@ -1,6 +1,8 @@
+/*jshint quotmark: null, undef: true, unused: true, globalstrict: true, browser: true, jquery: true, node: true, indent: 2*/
 $( document ).ready(function() {
 
-    var x = document.getElementById("demo");
+    'use strict';
+    //var x = document.getElementById("demo");
     getLocation();
 
 });
@@ -9,19 +11,21 @@ $( document ).ready(function() {
 //http://www.w3schools.com/html/html5_geolocation.asp
 //to help me access the browser's geolocation ability
 function getLocation() {
+    'use strict';
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(usePosition);
     } else {
+        var x = document.getElementById("demo");
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
 
 function usePosition(position) {
+    'use strict';
     var x = document.getElementById("demo");
     var temperature;
 
-    $.get('http://localhost:3000/api/'+ parseFloat(position.coords.latitude).toFixed(2) + '/'
-          + parseFloat(position.coords.longitude).toFixed(2), function(data){
+    $.get('http://localhost:3000/api/'+ parseFloat(position.coords.latitude).toFixed(2) + '/' + parseFloat(position.coords.longitude).toFixed(2), function(data){
         //    $.get('http://localhost:3000/api/47.6/-100', function(data) 
         //
         //          {
@@ -44,7 +48,7 @@ function usePosition(position) {
         } 
         else if (data.compare === 0) {
             x.innerHTML = "<h1> RAINING BOTH IN SEATTLE AND " + location + ". <BR> FUCK US BOTH.  </h1>";
-        } 
+        }
         else {
             x.innerHTML =  "<h1> SOMETHING WENT WRONG. SHIT. </h1>" + data;
         }
