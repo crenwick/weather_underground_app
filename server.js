@@ -23,7 +23,7 @@ app
     console.log(compare);
     res.json(
         {You: {loc: req.loc, temp: req.temp, precip: req.precip},
-         Seattle: {temp: req.tempS, precip: req.precipS}, 
+         Seattle: {temp: req.tempS, precip: req.precipS},
          compare: compare});
 });
 
